@@ -1,0 +1,371 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 280px));
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.product-card .button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.view-button, .edit-button, .delete-button {
+  background-color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.view-button:hover {
+  background-color: #5a6268;
+}
+
+.edit-button {
+  background-color: #007bff;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.wishlist-button {
+  background-color: #007bff;
+  padding: 8px 12px;
+  width: auto;
+  font-size: 14px;
+}
+
+.wishlist-button:hover {
+  background-color: #0056b3;
+}
+
+nav {
+  background: #333;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  background-color: #f4f4f4;
+}
+
+.auth-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.auth-card form {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.auth-card input {
+  margin: 8px 0;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-button {
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.close-button:hover {
+  background: #c82333;
+}
+
+.modal-content form {
+  max-width: 100%;
+  margin: 0;
+}
+
+.view-modal-content {
+  max-width: 100%;
+}
+
+.view-modal-content img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.view-modal-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.logout-button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.logout-button:hover {
+  color: #ccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .auth-card {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .logout-button {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+
+  .product-card p {
+    font-size: 13px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+  }
+
+  .create-button, .view-button, .edit-button, .delete-button {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .close-button {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .wishlist-button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
