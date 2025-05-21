@@ -368,4 +368,11 @@ nav a:hover {
     padding: 6px 10px;
     font-size: 13px;
   }
+  
+  .delete-button:hover svg {
+  color: darkred;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
 }
